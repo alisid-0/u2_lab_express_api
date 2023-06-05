@@ -164,3 +164,52 @@ const main = async () => {
 
 /////////////////////////////////////////////////////////
    
+
+const margotRobbieMovie1 = new Movie ({
+    title: "The Wolf of Wall Street Hood: Men in Tights",
+    runtime: 180,
+    rating: '9/10',
+    year_released: '2013',
+    image: 'https://upload.wikimedia.org/wikipedia/en/d/d8/The_Wolf_of_Wall_Street_%282013%29.png',
+    description: "American biographical black comedy crime film directed by Martin Scorsese and written by Terence Winter, based on Jordan Belfort's 2007 memoir of the same name. It recounts Belfort's career as a stockbroker in New York City and how his firm, Stratton Oakmont, engaged in rampant corruption and fraud on Wall Street, leading to his downfall."
+})
+
+
+const margotRobbieMovie2 = new Movie ({
+    title: 'The Legend of Tarzan',
+    runtime: 110,
+    rating: '7/10',
+    year_released: '2016',
+    image: 'https://upload.wikimedia.org/wikipedia/en/e/e5/The_Legend_of_Tarzan_poster.jpg',
+    description: 'The Legend of Tarzan is a 2016 adventure film directed by David Yates.[4] Based on the character Tarzan created by Edgar Rice Burroughs, the film stars Alexander Skarsgård, Samuel L. Jackson, Margot Robbie, Djimon Hounsou, Jim Broadbent, and Christoph Waltz. The story follows John Clayton (Tarzan), who, after moving to London, is convinced by George Washington Williams to return to his former home in the jungles of Africa, to investigate claims of slavery.'
+})
+
+
+const margotRobbieMovie3 = new Movie ({
+    title: 'Suicide Squad',
+    runtime: 123,
+    rating: '8/10',
+    year_released: '2016',
+    image: 'https://upload.wikimedia.org/wikipedia/en/5/5c/Suicide_Squad_%282016_film%29_poster.png',
+    description: 'Suicide Squad is a 2016 American superhero film based on the DC Comics supervillain/anti-hero team of the same name.  In the film, a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat in exchange for reduced sentences.'
+})
+
+
+const margotRobbieMovie4 = new Movie ({
+    title: 'Birds of Prey',
+    runtime: 109,
+    rating: '8/10',
+    year_released: '2020',
+    image: 'https://upload.wikimedia.org/wikipedia/en/1/1c/Birds_of_Prey_%282020_film%29_poster.jpg',
+    description: 'Birds of Prey, is a 2020 American superhero film directed by Cathy Yan and written by Christina Hodson.  The film follows Harley Quinn, who, after breaking up with the Joker.'
+})
+
+
+const margotRobbieMovie5 = new Movie ({
+    title: 'The Suicide Squad',
+    runtime: 132,
+    rating: '7/10',
+    year_released: '2021',
+    image: 'https://upload.wikimedia.org/wikipedia/en/0/06/The_Suicide_Squad_%28film%29_poster.jpg',
+    description: 'The Suicide Squad is a 2021 American superhero film based on the DC Comics team Suicide Squad. Produced by DC Films, Atlas Entertainment, and the Safran Company and distributed by Warner Bros. Pictures, it is a stand-alone sequel to Suicide Squad (2016) and the 10th film in the DC Extended Universe (DCEU).'
+})
