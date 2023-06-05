@@ -44,7 +44,7 @@ $actorsButton.on(`click`, async()=>{
             $actorInfoDiv.append($actorAge)
             for(let j of i.movies){
                 const $movie = $(`<h2>`)
-                $movie.html(j)
+                $movie.html(j.title)
                 $movies.append($movie)
             }
             $actorInfoDiv.append($movies)
