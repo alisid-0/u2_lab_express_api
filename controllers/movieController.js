@@ -11,7 +11,8 @@ const getAllMovies = async (req, res) => {
 
 const getMovieByTitle = async (req, res) => {
     try {
-        const movie = await Movie.find({title: req.params.title})
+        let searchKey = new RegExp(req.params.title, 'i')
+        const movie = await Movie.find({title: searchKey})
         if (!movie) throw Error('movie not found')
         res.status(200).json(movie)
     } catch (e) {
