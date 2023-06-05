@@ -16,7 +16,7 @@ const main = async () => {
         runtime: 94,
         rating: '8/10',
         year_released: '2004',
-        img: 'https://en.wikipedia.org/wiki/File:Movie_poster_Anchorman_The_Legend_of_Ron_Burgundy.jpg',
+        img: 'https://upload.wikimedia.org/wikipedia/en/6/64/Movie_poster_Anchorman_The_Legend_of_Ron_Burgundy.jpg',
         description: `The first installment in the Anchorman series, the film is a tongue-in-cheek take on the culture of the 1970s, particularly the new Action News format.  It portrays a San Diego television station where Ferrell's title character clashes with his new female counterpart.`
     })
 
@@ -72,7 +72,9 @@ const main = async () => {
     })
     reviewTalladegaNights2.movie = willFerrellMovie2._id
     await reviewTalladegaNights2.save()
-    
+
+    willFerrellMovie2.reviews.push(reviewTalladegaNights1._id, reviewTalladegaNights2._id)
+    await willFerrellMovie2.save()
     
     const jimCarrey = new Actor(
         {
@@ -115,7 +117,7 @@ const main = async () => {
         runtime: 96,
         rating: '8/10',
         year_released: 1996,
-        img: 'https://discord.com/channels/1106209088758624372/1115353825805598810/1115360197439926273',
+        img: 'https://upload.wikimedia.org/wikipedia/en/2/27/TheCableGuy.jpg',
         description: `The Cable Guy is a 1996 American black comedy film directed by Ben Stiller, written by Lou Holtz Jr. and starring Jim Carrey and Matthew Broderick. In the film, Carrey plays an eccentric cable installer who becomes overly intrusive in the life of a customer, played by Broderick.`
     })
 
@@ -155,12 +157,15 @@ const main = async () => {
     reviewAceVentura2.movie = jimCarreyMovie1._id
     await reviewAceVentura2.save()
 
+    jimCarreyMovie1.reviews.push(reviewAceVentura1._id, reviewAceVentura2._id)
+    await jimCarreyMovie1.save()
+
     const jackieChan = new Actor(
         {
             name: "Jackie Chan",
             age: 69,
             isAlive: true,
-            img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jim_Carrey_2008.jpg/220px-Jim_Carrey_2008.jpg'
+            img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Jackie_Chan_July_2016.jpg/220px-Jackie_Chan_July_2016.jpg'
         })
         
     await jackieChan.save()
@@ -238,6 +243,9 @@ const main = async () => {
     reviewRushHour2.movie = jackieChanMovie2._id
     await reviewRushHour2.save()
     
+    jackieChanMovie2.reviews.push(reviewRushHour1._id, reviewRushHour2._id)
+    await jackieChanMovie2.save()
+
     const daveChappelle = new Actor(
         {
             name: "Dave Chappelle",

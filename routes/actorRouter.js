@@ -3,8 +3,6 @@ const controller = require(`../controllers/actorController`)
 
 Router
     .get(`/`, controller.getAllActors)
-    .get(`/name/:name`, controller.getActorByName)
-    .get(`/movie/:movie`, controller.getActorsByMovie)
-
+    .get(`/:name`, controller.getActorByName)
 
 module.exports = Router
