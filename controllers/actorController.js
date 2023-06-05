@@ -9,6 +9,16 @@ const getAllActors = async (req, res) => {
     }
 }
 
+const getActorByName = async (req, res) => {
+    try {
+        const actor = await Actor.find({name: req.params.name})
+        if (!actor) throw Error('actor not found')
+        res.status(200).json(actor)
+    } catch (e) {
+        res.status(400).send(e.message)
+    }
+}
+
 const getActorsByMovie = async (req, res) => {
     try {
         const actors = await Actor.find({movie: req.params.movie})
@@ -21,5 +31,6 @@ const getActorsByMovie = async (req, res) => {
 
 module.exports = {
     getAllActors,
+    getActorByName,
     getActorsByMovie
 }
