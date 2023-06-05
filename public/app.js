@@ -4,8 +4,25 @@ const $container = $(`#movies-actors-container`)
 const $contentDiv = $(`#selected-content`)
 
 const movies = [`batman`, `spiderman`]
-const actors = [`rdj`, `denzel`]
 
+const getActors = async()=>{
+    const apiGet = await axios.get(`localhost:3001/api/actors`)
+    console.log(apiGet)
+    return apiGet
+}
+
+
+
+
+
+    
+
+$actorsButton.on(`click`, async()=>{
+    $contentDiv.empty()
+    await getActors()
+    console.log(getActors())
+    
+    })
 
 $moviesButton.on(`click`, ()=>{
     $contentDiv.empty()
@@ -22,21 +39,4 @@ $moviesButton.on(`click`, ()=>{
         $contentDiv.append($movie)
     }
     console.log(`movies`)
-    })
-    
-
-$actorsButton.on(`click`, ()=>{
-    $contentDiv.empty()
-    for(let i of actors){
-        console.log(i)
-        const $actor = $(`<div class="movie-in-list" id="${i}"></div>`)
-        const $actorName = $(`<h2>`)
-        $actor.on(`click`, ()=>{
-            $contentDiv.empty()
-        })
-        $actorName.html(i)
-        $actor.append($actorName)
-        $contentDiv.append($actor)
-    }
-    console.log(`actors`)
-    })
+})
