@@ -101,3 +101,11 @@ button{
 .movie-info-div{
     max-width: 800px;
 }
+
+#sort-buttons{
+    padding-top: 30px;
+}
+
+.sort{
+    font-size: 20px;
+}
