@@ -6,3 +6,5 @@ const actorSchema = new Schema(
     },
     { timestamps: true }
 )
+
+module.exports = actorSchema
