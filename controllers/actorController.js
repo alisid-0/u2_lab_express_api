@@ -2,7 +2,7 @@ const { Actor } = require('../models')
 
 const getAllActors = async (req, res) => {
     try {
-        const actors = await Actor.find()
+        const actors = await Actor.find().populate({path: 'movies', model: 'Movie'})
         res.status(200).json(actors)
     } catch (e) {
         res.status(400).send(e.message)
