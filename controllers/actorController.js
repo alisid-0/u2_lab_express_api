@@ -12,7 +12,7 @@ const getAllActors = async (req, res) => {
 const getActorByName = async (req, res) => {
     try {
         let searchKey = new RegExp(req.params.name, 'i')
-        const actor = await Actor.find({name: searchKey})
+        const actor = await Actor.find({name: searchKey}).populate({path: 'movies', model: 'Movie'})
         if (!actor) throw Error('actor not found')
         res.status(200).json(actor)
     } catch (e) {
