@@ -1,5 +1,5 @@
 const Router = require(`express`).Router()
-const controller = require(`../controllers/actorController`)
+const controller = require(`../controllers/reviewController`)
 
 Router
     .get(`/`, controller.getAllReviews)
