@@ -33,7 +33,7 @@ const reviewRushHour1 = new Review ({
 
 const reviewRushHour2 = new Review ({
         movie: 'Rush Hour',
-        comment: "This movie is the complete package with fun for everyone in the family",
+        comment: "This movie is the complete package with fun for everyone in the family.",
         rating: 9/10
 })
     
