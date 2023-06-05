@@ -12,4 +12,4 @@ const Actor = new Schema(
 )
 
 
-module.exports = actorSchema
+module.exports = Actor
