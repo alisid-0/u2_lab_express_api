@@ -10,8 +10,18 @@ const getActors = async()=>{
     return apiData
 }
 
-const getMovies = async()=>{
-    const apiGet = await axios.get(`http://localhost:3001/api/movies`)
+const getMovies = async(sort)=>{
+    let apiGet = null
+    if (sort==`asc`){
+        apiGet = await axios.get(`http://localhost:3001/api/movies?sort=asc`)
+    } else if (sort==`desc`){
+        apiGet = await axios.get(`http://localhost:3001/api/movies?sort=desc`)
+    } else if (sort==`new`){
+        apiGet = await axios.get(`http://localhost:3001/api/movies?sort=new`)
+    } else if (sort==`old`){
+        apiGet = await axios.get(`http://localhost:3001/api/movies?sort=old`)
+    }
+    
     const apiData = apiGet.data
     return apiData
 }
@@ -19,10 +29,8 @@ const getMovies = async()=>{
 $actorsButton.on(`click`, async()=>{
     $contentDiv.empty()
     $contentDiv.removeClass(`div-row`)
-    const apiData = await getActors()
-    console.log(apiData)
+    const apiData = await getActors(`asc`)
     for (let i of apiData){
-        console.log(i)
         const $actor = $(`<div class="actor-in-list">`)
         const $actorName = $(`<h2 class="actor-name">`)
         const $actorImg = $(`<img class="actor-img">`)
@@ -61,13 +69,11 @@ $actorsButton.on(`click`, async()=>{
     }
 })
 
-$moviesButton.on(`click`, async()=>{
+const movieFunc = async(sort)=>{
     $contentDiv.empty()
     $contentDiv.removeClass(`div-row`)
-    const apiData = await getMovies()
-    console.log(apiData)
+    const apiData = await getMovies(sort)
     for(let i of apiData){
-        console.log(i)
         const $movie = $(`<div class="movie-in-list" id="${i}"></div>`)
         const $movieTitle = $(`<h2 class="movie-title">`)
         const $movieImg = $(`<img class="movie-img">`)
@@ -87,7 +93,7 @@ $moviesButton.on(`click`, async()=>{
             $year.html(i.year_released)
             $runtime.html(`${i.runtime} minutes`)
             $desc.html(i.description)
-            $actors.html(`Starring: ${i.actors[0]}`)
+            $actors.html(`Starring: ${i.actors[0].name}`)
             $movieImgDiv.append($movieImg)
             $movieInfoDiv.append($movieTitle)
             $movieInfoDiv.append($year)
@@ -103,4 +109,30 @@ $moviesButton.on(`click`, async()=>{
         $movie.append($movieImg)
         $contentDiv.append($movie)
     }
+}
+
+$moviesButton.on(`click`, async()=>{
+    await movieFunc(`new`)
+})
+
+// $(`.sort`).on(`click`, async()=>{
+//     let id = $(this).prop('value')
+//     console.log(id)
+//     await movieFunc(id)
+// })
+
+$(`#asc`).on(`click`, async()=>{
+    await movieFunc(`asc`)
+})
+
+$(`#desc`).on(`click`, async()=>{
+    await movieFunc(`desc`)
+})
+
+$(`#new`).on(`click`, async()=>{
+    await movieFunc(`new`)
+})
+
+$(`#old`).on(`click`, async()=>{
+    await movieFunc(`old`)
 })
