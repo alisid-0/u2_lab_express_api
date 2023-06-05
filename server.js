@@ -9,6 +9,10 @@ const app = express()
 app.use(express.json())
 app.use(logger('dev'))
 
+app.use(express.static(`public`))
+
 app.use('/api', routes)
+
+app.use(`*`, express.static(`public`))
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
