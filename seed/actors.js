@@ -109,7 +109,7 @@ const main = async () => {
         description: 'The plot concerns 12-year-old Dre Parker (Jaden Smith), from Detroit, Michigan, who moves to Beijing, China with his mother (Taraji P. Henson) and runs afoul of the neighborhood bully Cheng (Zhenwei Wang). He makes an unlikely ally in the form of an aging maintenance man, Mr. Han (Jackie Chan), a kung fu master who teaches him the secrets of self-defense. '
     })
 
-/////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 
 
     const daveChappelleMovie1 = new Movie ({
@@ -123,42 +123,44 @@ const main = async () => {
 
 
     const daveChappelleMovie2 = new Movie ({
-        title: 'The Nutty Professor'
-        runtime: ,
-        rating: '',
-        year_released: '',
-        image: '',
-        description: ''
+        title: 'The Nutty Professor',
+        runtime: 96,
+        rating: '8/10',
+        year_released: '1996',
+        image: 'https://upload.wikimedia.org/wikipedia/en/7/7f/Nutty_professor_ver1.jpg',
+        description: 'The Nutty Professor is a 1996 American science fiction comedy film starring Eddie Murphy. It is a remake of the 1963 film of the same name.  A research scientist, academic, and lecturer, Klump develops a miraculous, but experimental, weight-loss pharmaceutical, and hoping to win the affection of the girl of his dreams, tests it upon himself.'
     })
 
 
     const daveChappelleMovie3 = new Movie ({
-        title: ''
-        runtime:,
-        rating: '',
-        year_released: '',
-        image: '',
-        description: ''
+        title: 'Half Baked',
+        runtime: 82,
+        rating: '7/10',
+        year_released: '1998',
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/1/10/Half-baked-dvd-cover.jpg/220px-Half-baked-dvd-cover.jpg',
+        description: 'Half Baked is a 1998 American stoner comedy film starring Dave Chappelle, Jim Breuer, Harland Williams, and Guillermo Díaz.'
     })
 
 
     const daveChappelleMovie4 = new Movie ({
-        title: ''
-        runtime:,
-        rating: '',
-        year_released: '',
-        image: '',
-        description: ''
+        title: 'Blue Streak',
+        runtime:93,
+        rating: '9/10',
+        year_released: '1999',
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/a/ab/Blue_Streak_film_poster.jpg/220px-Blue_Streak_film_poster.jpg',
+        description: 'Blue Streak is a 1999 American buddy cop action comedy film directed by Les Mayfield. Inspired by the 1965 film The Big Job, the film stars Martin Lawrence, Luke Wilson, Dave Chappelle, Peter Greene, Nicole Ari Parker and William Forsythe. Lawrence plays Miles, a jewel thief who tries to retrieve a diamond he left at a police station, whereupon he disguises himself as a detective and gets paired with a real policeman to investigate burglaries.'
     })
 
 
     const daveChappelleMovie5 = new Movie ({
-        title: ''
-        runtime:,
-        rating: '',
-        year_released: '',
-        image: '',
-        description: ''
+        title: 'Undercover Brother',
+        runtime: 88,
+        rating: '7/10',
+        year_released: '2002',
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Undercover_Brother_poster.JPG/220px-Undercover_Brother_poster.JPG',
+        description: 'The screenplay by John Ridley and Michael McCullers is based on the Internet animated series created by Ridley.'
     })
 
+
+/////////////////////////////////////////////////////////
    
