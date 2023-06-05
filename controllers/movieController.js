@@ -2,7 +2,7 @@ const { Movie } = require('../models')
 
 const getAllMovies = async (req, res) => {
     try {
-        const movies = await Movie.find()
+        const movies = await Movie.find().populate({path: 'reviews', model: 'Review'})
         res.status(200).json(movies)
     } catch (e) {
         res.status(400).send(e.message)
