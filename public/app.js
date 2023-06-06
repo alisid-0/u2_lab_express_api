@@ -2,6 +2,7 @@ const $moviesButton = $(`#movies-button`)
 const $actorsButton = $(`#actors-button`)
 const $container = $(`#movies-actors-container`)
 const $contentDiv = $(`#selected-content`)
+$(`.sort`).addClass(`hide`)
 
 
 const getActors = async()=>{
@@ -29,6 +30,7 @@ const getMovies = async(sort)=>{
 $actorsButton.on(`click`, async()=>{
     $contentDiv.empty()
     $contentDiv.removeClass(`div-row`)
+    $(`.sort`).addClass(`hide`)
     const apiData = await getActors(`asc`)
     for (let i of apiData){
         const $actor = $(`<div class="actor-in-list">`)
@@ -112,6 +114,7 @@ const movieFunc = async(sort)=>{
 }
 
 $moviesButton.on(`click`, async()=>{
+    $(`.sort`).removeClass(`hide`)
     await movieFunc(`new`)
 })
 
